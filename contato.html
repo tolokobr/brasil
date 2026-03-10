@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Brasil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #28a745;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .form-container h2 {
+            text-align: center;
+            color: #28a745;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+            font-size: 0.95em;
+        }
+        
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        input[type="password"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #28a745;
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #218838;
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .privacidade-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .privacidade-check input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px;
+            accent-color: #28a745;
+        }
+
+        .privacidade-check a {
+            color: #28a745;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .privacidade-check a:hover {
+            color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navegacao container">
+        <div class="logo">BRASIL</div>
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="https://www.cbf.com.br/a-cbf/noticias">Site CBF</a></li>
+                    <li><a href="https://www.instagram.com/brasil/">Instagram CBF</a></li>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Cadastro de Torcedor</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Crie uma senha forte" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" required>
+            </div>
+
+            <div class="privacidade-check">
+                <input type="checkbox" id="aceite" name="aceite" required>
+                <label for="aceite" style="font-weight: normal; margin: 0;">
+                    Li e concordo com a <a href="politica de privacidade.html" target="_blank">Política de Privacidade</a> do site.
+                </label>
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
