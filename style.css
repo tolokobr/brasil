@@ -1,0 +1,286 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    float: left;
+}
+
+.container_2 {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px #000000;
+}
+
+.content_menu { float: right; }
+
+/* Header */
+.navegacao {
+    background-color: #0000ff;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px #000000;
+}
+
+.navegacao li {
+    float: left;
+    padding: 10px;
+    list-style: none;
+}
+
+.navegacao li:hover {
+    background-color: #ffff00;
+    transition: 0.3s;
+}
+
+.navegacao li:hover a { color: #0000ff; }
+
+.navegacao a {
+    float: left;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.9em;
+    font-weight: 900;
+}
+
+/* Slide Show */
+.main_section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_section img {
+    object-fit: contain;
+    object-position: center center;
+    height: 400px;
+    width: 100%;
+    display: block;
+}
+
+.mascara_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+.text_slide {
+    width: 70%;
+    text-align: center;
+    color: #ffffff;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.text_slide h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+}
+
+/* Posts */
+.h1_padding {
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+.post {
+    width: 18%;
+    min-width: 150px;
+    margin: 1%;
+    float: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 3px solid #28a745;
+    box-shadow: 5px 5px 0px #0000ff;
+    transition: 0.2s;
+    overflow: hidden;
+    /* garante que todos os cards fiquem com a mesma estrutura */
+    display: flex;
+    flex-direction: column;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+    background-color: #ffff00;
+}
+
+.post p {
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    flex: 1; /* empurra o texto para preencher o espaço restante */
+}
+
+.post h1 {
+    color: #0000ff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+/* ===== IMAGENS DOS ÍDOLOS - TODAS COM MESMA ALTURA, SEM DEFORMAÇÃO ===== */
+.post img {
+    width: 100%;
+    height: 200px;           /* altura fixa igual para todos */
+    object-fit: cover;       /* preenche sem distorcer */
+    object-position: center 20%; /* foca na parte superior (rosto) */
+    display: block;
+    flex-shrink: 0;          /* impede que a imagem encolha */
+    border-bottom: 3px solid #28a745;
+}
+
+/* Limpa float */
+.clear { clear: both; }
+
+.centered-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.primeira-imagem {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* ===== CARD BRASIL - IMAGEM INTEIRA, SEM CORTE ===== */
+.post-brasil {
+    float: none !important;
+    clear: both;
+    width: 65% !important;
+    margin: 30px auto !important;
+    text-align: center;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+
+/* Substitui a regra geral .post img apenas para o Brasil */
+.post-brasil img {
+    width: 100%;
+    height: auto !important;       /* altura proporcional — sem corte */
+    max-height: none !important;
+    object-fit: fill !important;   /* mostra a imagem completa */
+    object-position: unset;
+    border-bottom: 3px solid #28a745;
+    display: block;
+    flex-shrink: 0;
+}
+
+.post-brasil h1 { font-size: 1.8em; }
+
+.post-brasil p {
+    text-align: justify;
+    padding: 15px 20px;
+}
+
+/* ===== BOTÕES DA BARRA DE NAVEGAÇÃO ===== */
+.navegacao nav ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+
+.navegacao li {
+    float: none !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+.navegacao li a {
+    display: inline-block;
+    float: none !important;
+    padding: 10px 20px !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navegacao li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+    background-color: #28a745;
+    border-radius: 2px;
+    transition: transform 0.25s ease;
+}
+
+.navegacao li:hover {
+    background-color: transparent !important;
+    transition: none;
+}
+
+.navegacao li:hover a {
+    background-color: #ffff00 !important;
+    color: #0000ff !important;
+    border-color: #ffff00;
+    box-shadow: 0 4px 14px rgba(255, 255, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.navegacao li:hover a::after {
+    transform: translateX(-50%) scaleX(1);
+    background-color: #0000ff;
+}
+
+.navegacao li a:active {
+    transform: translateY(0px);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
